@@ -1,6 +1,6 @@
 class fifo_read_driver extends uvm_driver#(fifo_read_seq_item);
   `uvm_component_utils(fifo_read_driver)
-  virtual fifo_read_inf.DRV intf_r;
+  virtual fifo_inf intf;
 
   function new(string name= "fifo_read_driver", uvm_component parent =null);
     super.new(name,parent);
@@ -8,25 +8,27 @@ class fifo_read_driver extends uvm_driver#(fifo_read_seq_item);
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if(!uvm_config_db#(virtual fifo_read_inf)::get(this,"","vif_r",intf_r))
+    if(!uvm_config_db#(virtual fifo_inf)::get(this,"","vif",intf))
       `uvm_info(get_full_name(),": VIF_R not found in driver",UVM_LOW)
   endfunction
 
   task run_phase(uvm_phase phase);
-    repeat(4) @(intf_r.drv_cb); // at 4th clock edge dut gets the input 
+    repeat(3) @(intf.read_drv_cb);  
     forever begin
-      req = fifo_read_seq_item::type_id::create("req");
       seq_item_port.get_next_item(req);
-      @(intf_r.drv_cb);
       drive_intf();
-      @(intf_r.drv_cb);
+      repeat(2) @(intf.read_drv_cb);
+      $display("-----------------READ DRIVER------------------------");
+      $display("-----------> [time : %0t]  read driver sequence :",$time);
+      req.print_seq; // prints the data that is sent to dut !
+      $write("| rrst_n : %0b \n",intf.rrst_n);
+      $display("-----------------READ DRIVER------------    ------------"); 
       seq_item_port.item_done();
     end
   endtask
 
   task drive_intf();
-    intf_r.drv_cb.rinc  <= req.rinc;
-    intf_r.drv_cb.rrst_n <= req.rrst_n;
+    intf.rinc  <= req.rinc;
   endtask
 
 endclass

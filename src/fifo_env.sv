@@ -5,7 +5,7 @@ class fifo_env extends uvm_env;
   fifo_write_agent agt_w;
   fifo_read_agent agt_r;
   fifo_scoreboard scb;
-  //fifo_subscriber sub;
+  fifo_subscriber sub;
 
   function new(string name ="fifo_env", uvm_component parent);
     super.new(name,parent);
@@ -17,17 +17,20 @@ class fifo_env extends uvm_env;
     agt_w = fifo_write_agent::type_id::create("agent_w",this);
     agt_r = fifo_read_agent::type_id::create("agent_r",this);
     scb = fifo_scoreboard::type_id::create("scoreboard",this);
-    //sub = fifo_subscriber::type_id::create("subscriber",this);
+    sub = fifo_subscriber::type_id::create("subscriber",this);
   endfunction 
 
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
-    //v_seqr.seqr_w = agt_w.seqr_w;
-    //v_seqr.seqr_r = agt_r.seqr_r;
+    v_seqr.seqr_w = agt_w.seqr_w;
+    v_seqr.seqr_r = agt_r.seqr_r;
 
-    agt_w.mon_w.analysis_port_monitor_w.connect(scb.analysis_write_imp);
-    agt_r.mon_r.analysis_port_monitor_r.connect(scb.analysis_read_imp);
-    // subscriber ....
+    // monitor -> scoreboard!
+    agt_w.mon_w.analysis_port_monitor_w.connect(scb.exp_port.analysis_export);
+    agt_r.mon_r.analysis_port_monitor_r.connect(scb.act_port.analysis_export);
+    // monitor -> coverage/subscriber !!
+    agt_w.mon_w.analysis_port_monitor_w.connect(sub.mon_w_port);
+    agt_r.mon_r.analysis_port_monitor_r.connect(sub.mon_r_port);
   endfunction
 
 endclass

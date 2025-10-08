@@ -14,10 +14,12 @@ class fifo_test extends uvm_test;
   endfunction 
 
   task run_phase(uvm_phase phase);
+    uvm_objection phase_done = phase.get_objection();
     v_seq = fifo_virtual_sequence::type_id::create("v_seq");
     phase.raise_objection(this);
     v_seq.start(env_h.v_seqr); // start an virtual sequence !!
     phase.drop_objection(this);
+    phase_done.set_drain_time(this,20);
   endtask
 
 endclass

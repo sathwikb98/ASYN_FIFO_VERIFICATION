@@ -1,7 +1,7 @@
 class fifo_write_monitor extends uvm_monitor;
   `uvm_component_utils(fifo_write_monitor)
 
-  virtual fifo_write_inf.MON intf_w;
+  virtual fifo_inf intf;
   uvm_analysis_port#(fifo_write_seq_item) analysis_port_monitor_w;
   fifo_write_seq_item req;
 
@@ -11,26 +11,31 @@ class fifo_write_monitor extends uvm_monitor;
   
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if(!uvm_config_db#(virtual fifo_write_inf)::get(this,"","vif_w",intf_w))
+    if(!uvm_config_db#(virtual fifo_inf)::get(this,"","vif",intf))
       `uvm_error(get_full_name(),"VIF not in write monitor !!")
     analysis_port_monitor_w = new("analysis_port_mon_w",this);
   endfunction
   
-  task body();
-    repeat(5) @(intf_w.mon_cb);
+  task run_phase(uvm_phase phase);
+    repeat(4) @(intf.write_mon_cb);
     forever begin
       req = fifo_write_seq_item::type_id::create("req");
+      repeat(1) @(intf.write_mon_cb);
       set_req();
+      $display("--------------WRITE MONITOR------------------------");
+      $display("------------------> [time : %0t] write_monitor sequence :",$time);
+      req.print_seq; // prints the data that is given from dut !
+      $write("| wrst_n : %0b \n",intf.wrst_n);
+      $display("--------------WRITE MONITOR-------------    -----------");
       analysis_port_monitor_w.write(req);
-      repeat(2) @(intf_w.mon_cb);
+      repeat(1) @(intf.write_mon_cb);
     end
   endtask
 
   task set_req();
-    req.winc = intf_w.mon_cb.winc;
-    req.wdata = intf_w.mon_cb.wdata;
-    req.wrst_n = intf_w.mon_cb.wrst_n;
-    req.wfull = intf_w.mon_cb.wfull;
+    req.winc = intf.winc;
+    req.wdata = intf.wdata;
+    req.wfull = intf.wfull;
   endtask
   
 endclass

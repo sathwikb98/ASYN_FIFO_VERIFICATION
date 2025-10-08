@@ -1,26 +1,42 @@
 `include "uvm_macros.svh"
 `include "defines.svh"
-`include "fifo_write_inf.sv"
-`include "fifo_read_inf.sv"
+`include "fifo_inf.sv"
 `include "asyn_fifo_pkg.sv"
+
+`include "design/FIFO_memory.v"
+`include "design/rptr_empty.v"
+`include "design/two_ff_sync.v"
+`include "design/wptr_full.v"
+`include "design/FIFO.v"
 
 module top;
   import uvm_pkg::*;
   import asyn_fifo_pkg::*;
 
   bit wclk,rclk;
+  bit rrst_n, wrst_n; 
 
-  fifo_write_inf intf_w(.wclk(wclk));
-  fifo_read_inf  intf_r(.rclk(rclk));
+  fifo_inf intf(.wclk(wclk), .rclk(rclk), .wrst_n(wrst_n), .rrst_n(rrst_n));
 
   always #5 wclk = ~wclk;
   always #5 rclk = ~rclk;
 
-  //FIFO dut (.wclk(wclk), .rclk(rclk), .winc(intf_w.winc), .wrst_n(intf_w.wrst_n), .rinc(intf_r.rinc), .rrst_n(intf_r.rrst_n), .wdata(intf_w.wdata), .wfull(intf_w.wfull), .rdata(intf_r.rdata), .rempty(intf_r.rempty));
+  FIFO dut (.wclk(wclk), .rclk(rclk), .winc(intf.winc), .wrst_n(intf.wrst_n), .rinc(intf.rinc), .rrst_n(intf.rrst_n), .wdata(intf.wdata), .wfull(intf.wfull), .rdata(intf.rdata), .rempty(intf.rempty));
 
   initial begin
-    uvm_config_db#(virtual fifo_write_inf)::set(uvm_root::get(), "*", "vif_w", intf_w);
-    uvm_config_db#(virtual fifo_read_inf)::set(uvm_root::get(), "*", "vif_r", intf_r);
+    wclk = 0; 
+    rclk = 0;
+    wrst_n = 0;
+    rrst_n = 0;
+    #20
+    rrst_n = 1;
+    #20
+    wrst_n = 1;
+  end
+
+
+  initial begin
+    uvm_config_db#(virtual fifo_inf)::set(uvm_root::get(), "*", "vif", intf);
   end
 
   initial begin
