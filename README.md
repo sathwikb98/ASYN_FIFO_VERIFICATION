@@ -1,3 +1,3 @@
 # ASYN_FIFO_VERIFICATION
 about asynchronous fifo working in 2 different clock for write and read operation 
-![ASYNCHRONOUS_FIFO_TB](https://github.com/user-attachments/assets/66e88bac-0461-4a1a-9e8c-25db0e49f8e3)
+![ASYNCHRONOUS_FIFO_TB](<img width="1517" height="767" alt="ASYNCHRONOUS_FIFO_TB drawio" src="https://github.com/user-attachments/assets/593da7ed-d404-4fd2-b328-09dfdfda3194" />)
