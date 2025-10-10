@@ -12,6 +12,7 @@ class fifo_write_sequence extends uvm_sequence#(fifo_write_seq_item);
       start_item(req);
       assert(req.randomize() with {req.winc == 1;} )
       finish_item(req);
+      //$display("-------------------> [%0d] WRITE_SEQUENCE_FINISHED <-----------------------",count);
     end
     $display("\n*-------------------> [0] WRITE_SEQUENCE1_START <-----------------------*\n",$time);
   endtask
@@ -66,4 +67,3 @@ class fifo_write_sequence3 extends uvm_sequence#(fifo_write_seq_item);
   endtask
 
 endclass
-

@@ -10,6 +10,9 @@ class fifo_read_sequence extends uvm_sequence#(fifo_read_seq_item); // read sequ
     repeat(`no_of_transaction) begin
       req = fifo_read_seq_item::type_id::create("req");
       `uvm_rand_send_with(req,{req.rinc == 1;})
+      start_item(req);
+      assert(req.randomize() with {req.rinc == 1;})
+      finish_item(req); 
     end
     $display("\n*-------------------> [0] READ_SEQUENCE1_FINISHED <----------------------*\n",$time);
   endtask

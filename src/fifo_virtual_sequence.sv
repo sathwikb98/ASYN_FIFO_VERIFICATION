@@ -5,13 +5,12 @@ class fifo_virtual_sequence extends uvm_sequence;
 
   fifo_write_sequence seq_w;
   fifo_read_sequence seq_r;
-
+  
   fifo_write_sequence2 seq_w2;
   fifo_read_sequence2 seq_r2;
 
   fifo_write_sequence3 seq_w3;
   fifo_read_sequence3 seq_r3;
-
 
   //`uvm_declare_p_sequencer(fifo_virtual_sequencer)
 

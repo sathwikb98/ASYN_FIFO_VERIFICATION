@@ -19,6 +19,7 @@ class fifo_test extends uvm_test;
     phase.raise_objection(this);
     v_seq.start(env_h.v_seqr); // start an virtual sequence !!
     phase.drop_objection(this);
+    phase_done.set_drain_time(this,20);
   endtask
 
 endclass

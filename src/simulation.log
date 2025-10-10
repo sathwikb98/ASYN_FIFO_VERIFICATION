@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 10:02:00 on Oct 10,2025
+# Start time: 10:22:03 on Oct 10,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -2446,9 +2446,6 @@
 # rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
 # ----------READ MONITOR-------------------------------
 # 
-# 
-# *-------------------> [0] READ_SEQUENCE1_FINISHED <----------------------*
-#                 1050
 # -------------------------------------------------------------------------------
 # RDATA : 214  |  REMPTY : 0
 # -------------------------------------------------------------------------------
@@ -2457,33 +2454,2107 @@
 # 214
 # The actual pkt-data is
 # 214
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1050: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# ** Info: VALID INPUTS
+#    Time: 1050 ns Started: 1050 ns  Scope: top.intf File: fifo_inf.sv Line: 50
 # 
-# UVM_INFO fifo_scoreboard.sv(116) @ 1050: uvm_test_top.env_h.scoreboard [SCB] TOTAL PASS: 49
-# UVM_INFO fifo_scoreboard.sv(117) @ 1050: uvm_test_top.env_h.scoreboard [SCB] TOTAL FAIL: 0
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1055] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1055 ns Started: 1055 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1065] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1065 ns Started: 1065 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1070]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1070] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1070: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1070 ns Started: 1070 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1075] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1075 ns Started: 1075 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1085] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1085 ns Started: 1085 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1090]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1090] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1090: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1090 ns Started: 1090 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1095] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1095 ns Started: 1095 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1105] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1105 ns Started: 1105 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1110]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1110] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1110: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1110 ns Started: 1110 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1115] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1115 ns Started: 1115 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1125] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1125 ns Started: 1125 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1130]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1130] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1130: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1130 ns Started: 1130 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1135] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1135 ns Started: 1135 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1145] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1145 ns Started: 1145 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1150]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1150] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1150: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1150 ns Started: 1150 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1155] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1155 ns Started: 1155 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1165] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1165 ns Started: 1165 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1170]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1170] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1170: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1170 ns Started: 1170 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1175] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1175 ns Started: 1175 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1185] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1185 ns Started: 1185 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1190]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1190] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1190: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1190 ns Started: 1190 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1195] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1195 ns Started: 1195 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1205] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1205 ns Started: 1205 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1210]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1210] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1210: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1210 ns Started: 1210 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1215] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1215 ns Started: 1215 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1225] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1225 ns Started: 1225 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1230]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1230] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1230: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1230 ns Started: 1230 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1235] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1235 ns Started: 1235 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1245] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1245 ns Started: 1245 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1250]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1250] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1250: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1250 ns Started: 1250 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1255] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1255 ns Started: 1255 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1265] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1265 ns Started: 1265 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1270]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1270] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1270: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1270 ns Started: 1270 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1275] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1275 ns Started: 1275 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1285] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1285 ns Started: 1285 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1290]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1290] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1290: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1290 ns Started: 1290 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1295] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1295 ns Started: 1295 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1305] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1305 ns Started: 1305 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1310]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1310] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1310: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1310 ns Started: 1310 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1315] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1315 ns Started: 1315 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1325] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1325 ns Started: 1325 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1330]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1330] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1330: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1330 ns Started: 1330 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1335] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1335 ns Started: 1335 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1345] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1345 ns Started: 1345 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1350]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1350] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1350: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1350 ns Started: 1350 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1355] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1355 ns Started: 1355 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1365] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1365 ns Started: 1365 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1370]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1370] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1370: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1370 ns Started: 1370 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1375] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1375 ns Started: 1375 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1385] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1385 ns Started: 1385 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1390]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1390] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1390: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1390 ns Started: 1390 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1395] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1395 ns Started: 1395 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1405] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1405 ns Started: 1405 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1410]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1410] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1410: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1410 ns Started: 1410 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1415] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1415 ns Started: 1415 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1425] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1425 ns Started: 1425 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1430]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1430] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1430: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1430 ns Started: 1430 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1435] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1435 ns Started: 1435 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1445] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1445 ns Started: 1445 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1450]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1450] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1450: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1450 ns Started: 1450 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1455] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1455 ns Started: 1455 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1465] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1465 ns Started: 1465 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1470]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1470] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1470: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1470 ns Started: 1470 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1475] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1475 ns Started: 1475 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1485] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1485 ns Started: 1485 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1490]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1490] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1490: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1490 ns Started: 1490 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1495] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1495 ns Started: 1495 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1505] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1505 ns Started: 1505 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1510]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1510] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1510: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1510 ns Started: 1510 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1515] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1515 ns Started: 1515 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1525] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1525 ns Started: 1525 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1530]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1530] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1530: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1530 ns Started: 1530 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1535] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1535 ns Started: 1535 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1545] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1545 ns Started: 1545 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1550]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1550] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1550: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1550 ns Started: 1550 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1555] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1555 ns Started: 1555 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1565] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1565 ns Started: 1565 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1570]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1570] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1570: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1570 ns Started: 1570 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1575] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1575 ns Started: 1575 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1585] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1585 ns Started: 1585 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1590]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1590] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1590: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1590 ns Started: 1590 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1595] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1595 ns Started: 1595 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1605] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1605 ns Started: 1605 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1610]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1610] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1610: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1610 ns Started: 1610 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1615] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1615 ns Started: 1615 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1625] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1625 ns Started: 1625 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1630]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1630] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1630: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1630 ns Started: 1630 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1635] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1635 ns Started: 1635 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1645] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1645 ns Started: 1645 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1650]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1650] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1650: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1650 ns Started: 1650 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1655] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1655 ns Started: 1655 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1665] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1665 ns Started: 1665 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1670]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1670] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1670: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1670 ns Started: 1670 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1675] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1675 ns Started: 1675 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1685] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1685 ns Started: 1685 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1690]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1690] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1690: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1690 ns Started: 1690 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1695] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1695 ns Started: 1695 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1705] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1705 ns Started: 1705 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1710]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1710] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1710: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1710 ns Started: 1710 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1715] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1715 ns Started: 1715 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1725] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1725 ns Started: 1725 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1730]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1730] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1730: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1730 ns Started: 1730 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1735] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1735 ns Started: 1735 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1745] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1745 ns Started: 1745 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1750]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1750] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1750: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1750 ns Started: 1750 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1755] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1755 ns Started: 1755 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1765] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1765 ns Started: 1765 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1770]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1770] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1770: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1770 ns Started: 1770 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1775] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1775 ns Started: 1775 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1785] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1785 ns Started: 1785 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1790]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1790] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1790: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1790 ns Started: 1790 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1795] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1795 ns Started: 1795 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1805] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1805 ns Started: 1805 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1810]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1810] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1810: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1810 ns Started: 1810 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1815] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1815 ns Started: 1815 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1825] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1825 ns Started: 1825 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1830]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1830] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1830: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1830 ns Started: 1830 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1835] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1835 ns Started: 1835 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1845] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1845 ns Started: 1845 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1850]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1850] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1850: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1850 ns Started: 1850 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1855] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1855 ns Started: 1855 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1865] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1865 ns Started: 1865 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1870]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1870] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1870: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1870 ns Started: 1870 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1875] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1875 ns Started: 1875 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1885] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1885 ns Started: 1885 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1890]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1890] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1890: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1890 ns Started: 1890 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1895] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1895 ns Started: 1895 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1905] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1905 ns Started: 1905 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1910]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1910] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1910: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1910 ns Started: 1910 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1915] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1915 ns Started: 1915 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1925] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1925 ns Started: 1925 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1930]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1930] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1930: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1930 ns Started: 1930 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1935] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1935 ns Started: 1935 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1945] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1945 ns Started: 1945 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1950]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1950] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1950: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1950 ns Started: 1950 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1955] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1955 ns Started: 1955 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1965] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1965 ns Started: 1965 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1970]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1970] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1970: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1970 ns Started: 1970 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1975] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1975 ns Started: 1975 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1985] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 1985 ns Started: 1985 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 1990]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 1990] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 1990: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 1990 ns Started: 1990 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 1995] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 1995 ns Started: 1995 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2005] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 2005 ns Started: 2005 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 2010]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 2010] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 2010: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 2010 ns Started: 2010 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2015] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 2015 ns Started: 2015 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2025] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 2025 ns Started: 2025 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 2030]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 2030] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 2030: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 2030 ns Started: 2030 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2035] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 2035 ns Started: 2035 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2045] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 2045 ns Started: 2045 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# -----------------READ DRIVER------------------------
+# -----------> [time : 2050]  read driver sequence :
+# rinc : 1  | rdata : x  | rempty : x  | rrst_n : 1 
+# -----------------READ DRIVER--------------------------
+# 
+# 
+# ----------READ MONITOR-------------------------------
+################## [time: 2050] read_monitor sequence : 
+# rinc : 1  | rdata : 214  | rempty : 0  | rrst_n : 1 
+# ----------READ MONITOR-------------------------------
+# 
+# 
+# *-------------------> [0] READ_SEQUENCE1_FINISHED <----------------------*
+#                 2050
+# -------------------------------------------------------------------------------
+# RDATA : 214  |  REMPTY : 0
+# -------------------------------------------------------------------------------
+# UVM_INFO fifo_scoreboard.sv(72) @ 2050: uvm_test_top.env_h.scoreboard [SCB] MATCHED
+# The expected pkt-data is
+# 214
+# The actual pkt-data is
+# 214
+# ** Info: VALID INPUTS
+#    Time: 2050 ns Started: 2050 ns  Scope: top.intf File: fifo_inf.sv Line: 50
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2055] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 0 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# ** Info: VALID INPUTS
+#    Time: 2055 ns Started: 2055 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# 
+# --------------WRITE MONITOR------------------------
+# ------------------> [time : 2065] write_monitor sequence :
+# winc : 1  |  wdata : 214  |  wfull : 1 | wrst_n : 1 
+# --------------WRITE MONITOR--------------------------
+# 
+# --------------------------------------------------------------------------------
+# FIFO_MEM : 214 214 214 214 214 214 214 214 214 214 214 214 214 214 | FIFO_FULL : 1
+# --------------------------------------------------------------------------------
+# ** Info: VALID INPUTS
+#    Time: 2065 ns Started: 2065 ns  Scope: top.intf File: fifo_inf.sv Line: 40
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 2070: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# UVM_INFO fifo_scoreboard.sv(116) @ 2070: uvm_test_top.env_h.scoreboard [SCB] TOTAL PASS: 99
+# UVM_INFO fifo_scoreboard.sv(117) @ 2070: uvm_test_top.env_h.scoreboard [SCB] TOTAL FAIL: 0
 # --------------------------------------------------------------------
-# UVM_INFO fifo_scoreboard.sv(119) @ 1050: uvm_test_top.env_h.scoreboard [SCB] 
+# UVM_INFO fifo_scoreboard.sv(119) @ 2070: uvm_test_top.env_h.scoreboard [SCB] 
 # FIFO_WRITE_FULL_PASS : 0  |   FIFO_WRITE_FULL_FAIL : 0
 # FIFO_READ_EMPTY_PASS :0  | FIFO_READ_EMPTY_FAIL : 0
 # --------------------------------------------------------------------
-# UVM_INFO fifo_subscriber.sv(79) @ 1050: uvm_test_top.env_h.subscriber [fifo_subscriber] Input Coverage ------> 55.73%,
-# UVM_INFO fifo_subscriber.sv(80) @ 1050: uvm_test_top.env_h.subscriber [fifo_subscriber] Output Coverage ------> 83.33%
+# UVM_INFO fifo_subscriber.sv(79) @ 2070: uvm_test_top.env_h.subscriber [fifo_subscriber] Input Coverage ------> 55.73%,
+# UVM_INFO fifo_subscriber.sv(80) @ 2070: uvm_test_top.env_h.subscriber [fifo_subscriber] Output Coverage ------> 83.33%
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   58
+# UVM_INFO :  108
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [Questa UVM]     2
 # [RNTST]     1
-# [SCB]    52
+# [SCB]   102
 # [TEST_DONE]     1
 # [fifo_subscriber]     2
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 1050 ns  Iteration: 68  Instance: /top
+#    Time: 2070 ns  Iteration: 53  Instance: /top
 # Saving coverage database on exit...
-# End time: 10:02:04 on Oct 10,2025, Elapsed time: 0:00:04
+# End time: 10:22:07 on Oct 10,2025, Elapsed time: 0:00:04
 # Errors: 2, Warnings: 0
