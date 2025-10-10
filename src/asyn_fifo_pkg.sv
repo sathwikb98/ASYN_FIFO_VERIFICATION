@@ -19,7 +19,7 @@ package asyn_fifo_pkg;
   `include "fifo_read_monitor.sv"
 
   `include "fifo_scoreboard.sv" 
-  //`include "fifo_subscriber.sv"
+  `include "fifo_subscriber.sv"
 
   `include "fifo_write_agent.sv"
   `include "fifo_read_agent.sv"
@@ -31,6 +31,5 @@ package asyn_fifo_pkg;
   `include "fifo_virtual_sequence.sv" // virtual sequencer !
   
   `include "fifo_test.sv"
-
   
 endpackage
